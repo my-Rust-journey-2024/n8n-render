@@ -1,4 +1,3 @@
-dockerfile
 FROM node:18-alpine
 
 # نصب n8n
