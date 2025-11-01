@@ -22,6 +22,6 @@ services:
       - key: WEBHOOK_URL
         value: https://n8n-bot.onrender.com
       - key: N8N_ENCRYPTION_KEY
-        value: your-super-secure-encryption-key-32-chars!
+        value: qwertyuiopasdfghjklzxcvbnmQWERTY
     healthCheckPath: /healthz
     port: 5678
