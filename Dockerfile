@@ -1,16 +1,14 @@
+dockerfile
+FROM node:18-alpine
 
-# از تصویر رسمی n8n استفاده کن
-FROM n8nio/n8n:latest
+# نصب n8n
+RUN npm install -g n8n
+
+# ایجاد پوشه لازم
+RUN mkdir -p /home/node/.n8n
 
 # تنظیم پورت
 EXPOSE 5678
 
-# تنظیمات محیطی
-ENV N8N_BASIC_AUTH_ACTIVE=true
-ENV N8N_BASIC_AUTH_USER=admin
-ENV N8N_BASIC_AUTH_PASSWORD=@M!r1385
-ENV N8N_HOST=0.0.0.0
-
-
 # اجرای n8n
-CMD ["/usr/local/bin/n8n", "start"]
+CMD ["n8n", "start", "--port", "5678", "--host", "0.0.0.0"]
