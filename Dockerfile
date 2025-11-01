@@ -1,4 +1,4 @@
-dockerfile
+
 # از تصویر رسمی n8n استفاده کن
 FROM n8nio/n8n:latest
 
